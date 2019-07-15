@@ -12,7 +12,7 @@
 Ce projet est destiné à faire des essais et à préparer la partie affichage sur l'écran de 7'.
 Les variables a afficher sont donc artificiellement définies à certaines valeurs tests pour vérifier le bon fonctionnement du programme.
 
-NOTE:
+[NOTE]
 ===============================
 * La carte Arduino est une carte compatible : WEMOS Mega + WiFi R3 ATmega2560 + ESP8266 (mémoire de 32 Mb) achetée sur amazon : https://www.amazon.fr/gp/product/B07HML8DZD/ref=ppx_yo_dt_b_asin_title_o09_s00?ie=UTF8&psc=1
 * L'écran 7' et son shield ont été achetés chez BuyDisplay : https://www.buydisplay.com/default/7-inch-arduino-touch-screen-shield-ssd1963-library-for-mega-due
