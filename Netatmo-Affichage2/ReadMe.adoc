@@ -13,6 +13,7 @@ Ce projet est destiné à faire des essais et à préparer la partie affichage s
 Les variables a afficher sont donc artificiellement définies à certaines valeurs tests pour vérifier le bon fonctionnement du programme.
 
 .Note
+[Note]TIP:
 Les polices présentes ici ont été récupérer ici : http://www.rinkydinkelectronics.com/r_fonts.php
 
 
