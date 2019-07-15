@@ -1,3 +1,13 @@
+class Capteur_CO2
+    : public Capteur {
+public:
+    Capteur_CO2() :
+                  un_membre_en_plus ( 0 )
+    {}
+public:
+    int un_membre_en_plus;
+};
+
 class Salon {
 public:
     Capteur     temperature;
