@@ -1,0 +1,15 @@
+= Les bibliothèques nécessaire au projet :
+
+[source,C++]
+----
+#include "TimeLib.h"
+----
+Dispo ici : https://github.com/PaulStoffregen/Time
+
+
+
+
+
+
+
+Pour plus d'information sur l'installation des bibliothèques, regardez: http://www.arduino.cc/en/Guide/Libraries
