@@ -16,5 +16,5 @@ Ce dépôt regroupe :
 * les fichiers PHP anonymisés qui exécutent les scripts API de Netatmo et de Openweathermap pour récupérer les données.
 * les bibliothèques utilisées dans les sketchs Arduino. _(il faut les placer dans le dossier_ ++/libraries/++ _du dossier des sketchs)_
 
-'/libraries/'
+''/libraries/''
 ==========================
