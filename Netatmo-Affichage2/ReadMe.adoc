@@ -12,13 +12,13 @@
 Ce projet est destiné à faire des essais et à préparer la partie affichage sur l'écran de 7'.
 Les variables a afficher sont donc artificiellement définies à certaines valeurs tests pour vérifier le bon fonctionnement du programme.
 
-[NOTE]
+NOTE:
 ===============================
-* La carte Arduino est une carte compatible : WEMOS Mega + WiFi R3 ATmega2560 + ESP8266 (mémoire de 32 Mb) achetée sur amazon : https://www.amazon.fr/gp/product/B07HML8DZD/ref=ppx_yo_dt_b_asin_title_o09_s00?ie=UTF8&psc=1
-* L'écran 7' et son shield ont été achetés chez BuyDisplay : https://www.buydisplay.com/default/7-inch-arduino-touch-screen-shield-ssd1963-library-for-mega-due
+* La carte Arduino est une carte compatible : https://www.amazon.fr/gp/product/B07HML8DZD/ref=ppx_yo_dt_b_asin_title_o09_s00?ie=UTF8&psc=1[WEMOS Mega + WiFi R3 ATmega2560 + ESP8266 (mémoire de 32 Mb) achetée sur amazon]
+* L'écran 7' et son shield ont été achetés https://www.buydisplay.com/default/7-inch-arduino-touch-screen-shield-ssd1963-library-for-mega-due[chez BuyDisplay]
 
-* Les polices présentes ici ont été récupérer ici : http://www.rinkydinkelectronics.com/r_fonts.php
-* La bibliothèque UTFT_Geometry présente dans ce dépot a été récupérée ici : http://www.rinkydinkelectronics.com/library.php?id=59
+* Les polices présentes ici ont été récupérer ici : http://www.rinkydinkelectronics.com/r_fonts.php[http://www.rinkydinkelectronics.com/r_fonts.php]
+* La bibliothèque UTFT_Geometry présente dans ce dépot a été récupérée ici : http://www.rinkydinkelectronics.com/library.php?id=59[http://www.rinkydinkelectronics.com/library.php?id=59]
 * La bibliothèque UTFT présente dans ce dépot est une version modifiée par BuyDisplay de celle présente chez rinkydinkelectronics.
 ===============================
 
