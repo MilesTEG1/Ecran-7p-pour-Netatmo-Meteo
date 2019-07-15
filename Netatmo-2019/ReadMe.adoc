@@ -1,15 +1,44 @@
 :Author: MilesTEG
-:Email: {AuthorEmail}
-:Date: 03/05/2019
-:Revision: version#
-:License: Public Domain
+:Email: {0}
+:Date: 15/07/2019
+:Revision: 1.0
+:License: GNU Affero General Public License v3.0
 
-= Project: {Project}
+= Project: Netatmo-2019
 
-Describe your project
+// ***********************************************************************************
+// *****************  Netatmo - Afficheurs LCD - Connexion Internet  *****************
+// ***********************************************************************************
+// ------ Date de création : 15 Avril 2019
+// ------ Date de dernière révision : 11 mai 2019
+// ------ Auteur : MilesTEG
+// ***********************************************************************************
+// ** Pour ce projet, je me suis grandement inspiré du projet "Netatmo DualScreen Station"
+// ** de Barzok : --> https://www.instructables.com/id/Netatmo-DualScreen-Station/
+// ** mais aussi du projet Station méteo sur TFT 7 "
+// ** de hameau : https://forum.arduino.cc/index.php?topic=559421.new#new
+// ** Un très grand merci à ce dernier qui m'a beaucoup aidé et fourni des ressources
+// **
+// ***********************************************************************************
+// Explications des objectifs de ce script et de ceux inclus pour son fonctionnement :
+// L'idée est d'utiliser deux scripts PHP (netatmo2019.php et openweathermap2019.php)
+// qui récupèrent via les API de Netatmo et de OpenWeatherMap les données de la sonde
+// météo et des prévisions sur 5 jours.
+//   J'ai du mettre à jour les scripts fourni par Barzok car l'API Netatmo à changé,
+//   celle de OpenWeatherMap presque pas.
+// Le script exéctué par l'Arduino va donc se connecter à interet via la shield ESP8266
+// et lancer les deux scripts qui sont hébergés sur mon NAS. (Il faudra peut-être adapter
+// ce point a votre utilisation, par exemple faire tourner un serveur sur votre ordinateur
+// ou une autre solution.)
+// Ces deux scripts formatent les données d'une certaine manière.
+// netatmo2019.php retourne 4 lignes ;
+// openweathermap2019.php retourne une seule ligne.
+// *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+
 
 == Step 1: Installation
-Please describe the steps to install this project.
+{Please describe the steps to install this project.}
 
 For example:
 
@@ -28,18 +57,21 @@ Upload the code contained in this sketch on to your board
 === Folder structure
 
 ....
- sketch123                => Arduino sketch folder
-  ├── sketch123.ino       => main Arduino file
+ Netatmo-2019             => Arduino sketch folder
+  ├── Netatmo-2019.ino    => main Arduino file
   ├── schematics.png      => (optional) an image of the required schematics
   ├── layout.png          => (optional) an image of the layout
-  └── ReadMe.adoc         => this file
+  ├── ReadMe.adoc         => this file
+  ├──
+
 ....
 
 === License
-This project is released under a {License} License.
+This project is released under a GNU Affero General Public License v3.0 License.
 
 === Contributing
-To contribute to this project please contact MilesTEG https://id.arduino.cc/MilesTEG
+Pour contribuer à ce projet, contacter MilesTEG https://id.arduino.cc/MilesTEG
+Page du projet sur le forum Arduino : https://forum.arduino.cc/index.php?topic=613449.0
 
 === BOM
 Add the bill of the materials you need for this project.
