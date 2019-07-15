@@ -11,7 +11,7 @@
 Pour ce projet, je me suis grandement inspiré du projet "Netatmo DualScreen Station" de Barzok : --> https://www.instructables.com/id/Netatmo-DualScreen-Station/ mais aussi du projet Station méteo sur TFT 7" de hameau : https://forum.arduino.cc/index.php?topic=559421.new#new
 Un très grand merci à ce dernier qui m'a beaucoup aidé et fourni des ressources
 
-Explications des objectifs de ce script et de ceux inclus pour son fonctionnement :
+== Explications des objectifs de ce script et de ceux inclus pour son fonctionnement :
 L'idée est d'utiliser deux scripts PHP (netatmo2019.php et openweathermap2019.php) qui récupèrent via les API de Netatmo et de OpenWeatherMap les données de la sonde météo et des prévisions sur 5 jours.
 
 J'ai du mettre à jour les scripts fourni par Barzok car l'API Netatmo à changé, celle de OpenWeatherMap presque pas.
