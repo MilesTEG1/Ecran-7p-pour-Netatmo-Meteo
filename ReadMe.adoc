@@ -1,2 +1,7 @@
 = Ecran-7p-pour-Netatmo-Meteo
+
 == Écran 7pouces pour afficher les données d'une station météo Netatmo
+Ce dépôt regroupe : 
+* le sketch Arduino principal anonymisé : Netatmo-2019
+* le sketch secondaire me permettant de faire des tests et de préparer l'affichage : Netatmo-Affichage2
+* les fichiers PHP anonymisés qui exécutent les scripts API de Netatmo et de Openweathermap pour récupérer les données.
