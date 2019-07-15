@@ -14,7 +14,6 @@ Les variables a afficher sont donc artificiellement définies à certaines valeu
 
 .Note :
 [Note]
-TIP:
 Les polices présentes ici ont été récupérer ici : http://www.rinkydinkelectronics.com/r_fonts.php
 
 
