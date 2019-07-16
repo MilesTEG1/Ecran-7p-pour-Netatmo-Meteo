@@ -34,7 +34,8 @@
 #include <UTFT_Geometry.h>
 
 
-// Puis les fichiers headers des modules contenant les diverses fonctions
+// Puis les fichiers headers des modules contenant les diverses variables et fonctions
+#include "Netatmo_ID_Wifi.h"    // Pour les Identifiants de connexion au Wifi et l'adresse du serveur WEB
 // #include "Netatmo_Fonctions_Temps.h"
 #include "Netatmo_Fonctions_Wifi.h"
 #include "Netatmo_Fonctions_Affichage.h"
@@ -51,6 +52,97 @@ UTFT_Geometry geo_myGLCD ( &myGLCD );   // Pour tracer des triangles
 // *-*-*-*  (Internet - Affichage - Temps)
 // Les données actuelles et précédentes sont utilisées pour raffraichir l'affichage seulement si nécessaire
 // Les valeurs sont en Text lorsqu'elles sont récupérées du flux internet
+
+// Définition des structures de données
+typedef struct Exterieur Exterieur;
+struct Exterieur {  // Structure qui regroupe toutes les variables de la station météo
+    float  temp_num;
+    float  temp_num_prec;   // La valeur précédente pour la comparaison
+    int    humidite;
+    int    humidite_prec;   // La valeur précédente pour la comparaison
+    String temp_tendance;   // La variable text récupérée du flux Internet
+    String temp_texte;      // La variable text récupérée du flux Internet
+    String humidite_texte;  // La variable text récupérée du flux Internet
+    Exterieur () :
+        temp_num ( -99.9 ),
+        temp_num_prec ( -99.9 ),
+        humidite ( 0 ),
+        humidite_prec ( 0 ),
+        temp_tendance ( "up" ),
+        temp_texte ( "" ),
+        humidite_texte ( "" ) {}
+};
+
+typedef struct Salon Salon;
+struct Salon {  // Structure qui regroupe toutes les variables de la station météo
+    float  temp_num;
+    float  temp_num_prec;       // La valeur précédente pour la comparaison
+    int    CO2;
+    int    CO2_prec;            // La valeur précédente pour la comparaison
+    int    pression;
+    int    pression_prec;       // La valeur précédente pour la comparaison
+    int    humidite;
+    int    humidite_prec;       // La valeur précédente pour la comparaison
+    String temp_tendance;
+    String temp_texte;          // La variable text récupérée du flux Internet
+    String CO2_texte;           // La variable text récupérée du flux Internet
+    String pression_texte;      // La variable text récupérée du flux Internet
+    String pression_tendance;   // La variable text récupérée du flux Internet
+    String humidite_texte;      // La variable text récupérée du flux Internet
+    Salon() :
+        temp_num ( -99.9 ),
+        temp_num_prec ( -99.9 ),
+        CO2 ( 9999 ),
+        CO2_prec ( 9999 ),
+        pression ( 9999 ),
+        pression_prec ( 9999 ),
+        humidite ( 0 ),
+        humidite_prec ( 0 ),
+        temp_tendance ( "up" ),
+        temp_texte ( "" ),
+        CO2_texte ( "" ),
+        pression_texte ( "" ),
+        pression_tendance ( "up" ),
+        humidite_texte ( "" ) {}
+};
+
+typedef struct Chambre Chambre;
+struct Chambre {    // Structure qui regroupe toutes les variables de la station météo
+    float  temp_num;
+    float  temp_num_prec;   // La valeur précédente pour la comparaison
+    int    CO2;
+    int    CO2_prec;        // La valeur précédente pour la comparaison
+    int    humidite;
+    int    humidite_prec;   // La valeur précédente pour la comparaison
+    String temp_tendance;
+    String temp_texte;      // La variable text récupérée du flux Internet
+    String CO2_texte;       // La variable text récupérée du flux Internet
+    String humidite_texte;  // La variable text récupérée du flux Internet
+    Chambre() :
+        temp_num ( -99.9 ),
+        temp_num_prec ( -99.9 ),
+        CO2 ( 9999 ),
+        CO2_prec ( 9999 ),
+        humidite ( 0 ),
+        humidite_prec ( 0 ),
+        temp_tendance ( "up" ),
+        temp_texte ( "" ),
+        CO2_texte ( "" ),
+        humidite_texte ( "" ) {}
+};
+
+typedef struct Station_Meteo Station_Meteo;     // Probablement pas utile...
+struct Station_Meteo {  // Structure qui regroupe toutes les variables de la station météo
+    Exterieur exterieur;
+    Salon     salon;
+    Chambre   chambre;
+};
+
+// Station_Meteo _ma_Station = { { -99.9, -99.9, 0, 0, "up", "", "" }, { -99.9, -99.9, 9999, 9999, 9999, 9999, 0, 0, "up", "", "", "", "up", "" }, { -99.9, -99.9, 9999, 9999, 0, 0, "up", "", "", "up" } };
+Station_Meteo _ma_Station;
+
+
+
 
 // ======== LES TEMPÉRATURES
 // Température Extérieure
@@ -135,13 +227,6 @@ float _Pluie_Apres_Demain;
 
 time_t _Temps_Meteo = 0;
 
-// ********** Variables de la gestion WIFI
-String _wifi_SSID = "";     // Mettre ici le SSID du réseau Wi-Fi
-String _wifi_PASS = "";     // Mettre ici le Mot de passe Wi-Fi
-String _hote_php  = "";     // Mettre ici l'Adresse du serveur où se trouve les scripts PHP
-// Il faut juste le nom d'hote, de domaine, ou
-// l'adresse IP.
-// Ne pas mettre toute l'adresse du fichier PHP...
 
 // ********** Autres variables définies ailleurs et utilisées dans d'autres modules
 // Pour le module de récupération des données et leur extraction via la communication série
