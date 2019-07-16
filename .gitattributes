@@ -1,5 +1,6 @@
 # Example of a `.gitattributes` file which reclassifies `.rb` files as Java:
-*.rb linguist-language=Cpp
+#*.rb linguist-language=Cpp
+*.ino linguist-language=Cpp
 
 
 # Sources
@@ -12,6 +13,7 @@
 *.h     text diff=c
 *.h++   text diff=cpp
 *.hh    text diff=cpp
+*.ino	text diff=cpp
 
 # Compiled Object files
 *.slo   binary
