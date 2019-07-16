@@ -242,6 +242,7 @@ time_t _PreviousTime = 0;
 bool heureEte        = true;    // Si true alors l'heure d'été est en place, sinon, c'est l'heure d'hiver
 
 bool _PremiereBoucle = true;
+
 String _buffer       = "";      // C'est LA VARIABLE du programme qui va stocker les données récupérées des scripts PHP !!
 int _cursor        = 0;         // Pour stocker l'index du curseur où on se trouve dans le _buffer
 int _buffer_length = 0;     // Pour la longueur du _buffer
