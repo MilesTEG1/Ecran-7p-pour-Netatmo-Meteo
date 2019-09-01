@@ -5,6 +5,7 @@
 #include "TimeLib.h"
 ----
 Dispo ici : https://github.com/PaulStoffregen/Time
+
 _ _ _ _
 
 [source,C++]
@@ -12,6 +13,7 @@ _ _ _ _
 #include <UTFT_Geometry.h>
 ----
 La bibliothèque UTFT_Geometry présente dans ce dépot a été récupérée ici : http://www.rinkydinkelectronics.com/library.php?id=59[http://www.rinkydinkelectronics.com/library.php?id=59]
+
 _ _ _ _
 
 [source,C++]
@@ -19,6 +21,7 @@ _ _ _ _
 #include <UTFT.h>
 ----
 La bibliothèque UTFT présente dans ce dépot est une version modifiée par BuyDisplay de celle présente chez rinkydinkelectronics.
+
 _ _ _ _
 
 
