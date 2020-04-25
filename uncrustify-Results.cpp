@@ -1,5 +1,5 @@
 class Capteur {
-    public: Capteur();
+    public: Capteur ();
     public:
         float  val_num;
         float  val_num_prec;    // La valeur précédente pour la comparaison
